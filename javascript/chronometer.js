@@ -8,6 +8,9 @@ class Chronometer {
       
       this.intervalId = setInterval(() => {
         this.currentTime += 1;
+        if(callback){
+          callback();
+        } //Para que no lance error por si no recibe ninguna funcion
         },1000 );
     }
 
